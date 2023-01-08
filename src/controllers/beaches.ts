@@ -9,10 +9,8 @@ export class BeachesController {
   public async create(req: Request, res: Response): Promise<void> {
     try {
       const beach = new Beach(req.body)
-      // console.log('BEACH', beach.toJSON())
       const result = await beach.save()
-      // console.log('RESULT', result)
-      res.status(201).send(result.toJSON())
+      res.status(201).send(result)
     } catch (error) {
       if (error instanceof mongoose.Error.ValidationError) {
         res.status(422).send({ error: error.message })
