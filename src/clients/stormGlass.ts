@@ -84,8 +84,7 @@ export class StormGlass {
           },
         }
       );
-      console.log('response', response);
-      console.log('response.data', response.data);
+
       return this.normalizeResponse(response.data);
     } catch (err) {
       /**
