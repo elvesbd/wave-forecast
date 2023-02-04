@@ -4,6 +4,10 @@
     "database": {
       "mongoUrl": "mongodb://root:12345678@localhost:27017/surf-forecast?authSource=admin"
     },
+    "auth": {
+      "key": "some-key",
+      "tokenExpiresIn": "20000"
+    },
     "resources": {
       "StormGlass": {
         "apiUrl": "https://api.stormglass.io/v2",
